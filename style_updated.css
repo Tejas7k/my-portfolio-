@@ -1,0 +1,890 @@
+* {
+    box-sizing: border-box;
+
+    --primary: #1F2235;
+    --secondary: #24263b;
+    --secondary-text: #dfdfdf;
+  
+    --blue-light: #8abdff;
+    --blue: #6d5dfc;
+    --blue-dark: #5b0eeb;
+
+    --greyLight-1: #E4EBF5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --white: #FFFFFF;
+    --greyDark: #9baacf;
+
+    --sql: #0076c6;
+    --js: #efd81d;
+    --java: #e42c2e;
+    --html-dark: #dd4d26;
+    --html-light: #e5622a;
+    --css-dark: #254bdd;
+    --css-light: #2862e9;
+    --full: 100%;
+    --max-width-body: 1170px;
+    --top-padding: 10px;
+}
+
+.divider {
+    margin: .5rem auto;
+    width: 4rem;
+    height: .4rem;
+    background: var(--greyLight-1);
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.scroll-button {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: var(--greyLight-1);
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+.scroll-button:hover,
+.scroll-button:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+nav .generic-container .nav ul li a:hover,
+nav .generic-container .nav ul li a#menu-home {
+    color: var(--primary);
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 10%;
+    font-family: Arial, sans-serif;
+    background: var(--greyLight-1);
+    color: var(--primary);
+}
+  .generic-container .logo img {
+    max-width: 100px; /* Adjust logo size */
+    height: auto;
+    display: block; 
+    border-radius: 10%;/* Ensure proper alignment */ 
+}
+nav .generic-container .mobile-button {
+    display: none;
+}
+nav {
+    padding: var(--top-padding) 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+nav .generic-container {
+    width: var(--full);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .generic-container .nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 0.4rem;
+    padding: 0.7rem 0;
+}
+nav .generic-container .nav ul li {
+    margin: 0 1rem;
+    list-style: none;
+}
+nav .generic-container .nav ul li a {
+    text-decoration: none;
+    color: var(--greyDark);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 0.4rem;
+    padding: .3rem .7rem;
+}
+nav .generic-container .nav ul li a:hover,
+nav .generic-container .nav ul li a:active {
+    color: var(--primary);
+}
+.hero-banner {
+    padding: 0 0 50px 0;
+    background: var(--greyLight-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-banner#home {
+    padding: 0 0 50px 0;
+    min-height: 85vh;
+}
+.hero-banner .generic-container {
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.hero-banner .generic-container .image {
+    width: 40%;
+    min-width: 300px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner .generic-container .image:hover {
+    box-shadow: inset 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner .generic-container .image .profile-picture {
+    background: url("profilephoto.jfif") no-repeat 100%/cover;
+    width: 285px;
+    height: 210px;
+    border-radius: .5rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner .generic-container .text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: var(--full);
+    min-width: 300px;
+}
+.hero-banner .generic-container .text ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+.hero-banner .generic-container .text ul li {
+    border-radius: 50%;
+    padding: .8rem 1rem .6rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    transition: all 0.5s ease;
+}
+.hero-banner .generic-container .text ul li:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner .generic-container .text ul li a {
+    text-decoration: none;
+}
+.hero-banner .generic-container .text ul li a i {
+    font-size: 1.2rem;
+    color: var(--greyDark);
+}
+.hero-banner .generic-container .text ul li:hover a i,
+.hero-banner .generic-container .text ul li:active a i {
+    color: var(--primary);
+}
+.hero-banner .generic-container .text ul li a img {
+    width: 30px; /* Image size */
+    height: 30px;
+}
+
+.hero-banner .generic-container .text button {
+    padding: .5rem 1.3rem;
+    border: none;
+    border-radius: 1rem;
+    font-family: inherit;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    grid-column: 1/2;
+    grid-row: 5/6;
+    color: var(--greyDark);
+}
+.hero-banner .generic-container .text button:hover {
+    color: var(--primary);
+}
+.hero-banner .generic-container .text button:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner .generic-container .text h1 {
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.3;
+    white-space: nowrap;
+    max-width: 300px;
+    overflow: hidden;
+    border-right: .15em solid transparent;
+    animation: typing 2.7s steps(15, end), blink-caret .3s step-end 10;
+}
+.hero-banner .generic-container .text p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    color: var(--greyLight-3);
+    max-width: 500px
+}
+.hero-banner.about-hero-banner {
+    padding: 0 0 50px 0;
+}
+.hero-banner .hero-banner-wrapper {
+    width: var(--full);
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-header {
+    width: var(--full);
+    height: 15%;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-header h1 {
+    font-size: 2.6rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.3;
+    text-align: center;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-header p {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 400px;
+    color: var(--greyLight-3);
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body {
+    display: flex;
+    flex-flow: row wrap;
+    width: var(--full);
+    justify-content: center;
+}
+.hero-banner.about-hero-banner .hero-banner-wrapper .hero-banner-body .left,
+.hero-banner.about-hero-banner .hero-banner-wrapper .hero-banner-body .right {
+    width: 50%;
+    min-width: 300px;
+}
+.hero-banner.about-hero-banner .hero-banner-wrapper .hero-banner-body .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .left .profile-picture-wrapper {
+    width: 300px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .left .profile-picture-wrapper:hover {
+    box-shadow: inset 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .left .profile-picture-wrapper .profile-picture {
+    width: 285px;
+    background: url("profilephoto.jfif") no-repeat 100%/cover;
+    height: 210px;
+    border-radius: .5rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner.about-hero-banner .hero-banner-wrapper .hero-banner-body .right {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .right .contact-info {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .right .contact-info .info {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 48%;
+    margin-bottom: 1.5rem;
+    border-radius: .4rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .right h1,
+.hero-banner .hero-banner-wrapper .hero-banner-body .right p {
+    padding-left: .8rem;
+    margin: 0;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .right h1 {
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    font-family: Arial, sans-serif;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .right p {
+    font-size: .9rem;
+    margin: .7rem 0 .5rem 0;
+}
+.hero-banner .hero-banner-wrapper .hero-banner-body .right .contact-info .info h1 {
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+.hero-banner.skill-hero-banner {
+    padding: 0 0 50px 0;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper {
+    justify-content: center;
+    min-height: 90vh;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left,
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right {
+    width: 48%;
+    min-width: 300px;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body {
+    height: 85%;
+    padding: 50px 0;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left button {
+    padding: .5rem 1rem;
+    max-width: 180px;
+    border: none;
+    border-radius: 1rem;
+    font-family: inherit;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--greyDark);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left button:hover,
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left button:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left span {
+    font-size: 1.1rem;
+    color: var(--greyDark);
+    text-transform: uppercase;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    max-width: 300px;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left p {
+    max-width: 300px;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right {
+    padding: 0 2rem;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider span {
+    color: var(--greyLight-3);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box {
+    width: 100%;
+    height: .5rem;
+    cursor: pointer;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box .slider-btn {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: var(--greyLight-1);
+    position: absolute;
+    box-shadow: 0 0.1rem 0.3rem 0 var(--greyLight-3);
+    z-index: 200;
+    left: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box .slider-btn::after {
+    content: "";
+    position: absolute;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box .slider-color {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    border-radius: inherit;
+    background: var(--primary);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#html .slider-color {
+    background: linear-gradient(-1deg, var(--html-light) 70%, var(--html-dark) 100%);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#css .slider-color {
+    background: linear-gradient(-1deg, var(--css-light) 80%, var(--css-dark) 100%);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#js .slider-color {
+    background: linear-gradient(-1deg, var(--js) 80%, var(--js) 100%);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#sql .slider-color {
+    background: linear-gradient(-1deg, var(--sql) 40%, var(--sql) 100%);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#java .slider-color {
+    background: linear-gradient(-1deg, var(--java) 60%, var(--java) 100%);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box .slider-tooltip {
+    position: absolute;
+    top: 1.5rem;
+    left: 45%;
+    height: 1.7rem;
+    width: 3rem;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    color: var(--primary);
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--greyLight-3);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#java .slider-tooltip {
+    color: var(--java);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#js .slider-tooltip {
+    color: var(--js);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#html .slider-tooltip {
+    color: var(--html-dark);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#css .slider-tooltip {
+    color: var(--css-dark);
+}
+.hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .right .slider .slider-box#sql .slider-tooltip {
+    color: var(--sql);
+}
+.hero-banner.contact-hero-banner {
+    padding: 0 0 50px 0;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-header span {
+    color: var(--greyLight-3);
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    height: 90px;
+    border-radius: .5rem;
+    color: var(--primary);
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos .card .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos .card .icon i {
+    font-size: 1.4rem;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos .card .icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos .card .info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 80%;
+    height: 100%;
+    padding: .8rem 0;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos .card .info span {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    margin: 0 0 0 .5rem;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos .card .info p {
+    margin: 0 0 0 .5rem;
+    font-size: .9rem;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .form {
+    margin-top: 3rem;
+    width: 45%;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .subject {
+    width: 100%;
+    margin-top: 2rem;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .subject .form-input {
+    height: 4rem;
+    border: none;
+    border-radius: .4rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    font-family: inherit;
+    color: var(--greyDark);
+    width: 100%;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me textarea {
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    color: var(--greyDark);
+    padding: 1rem;
+    border-radius: .4rem;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    max-height: 30%;
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .form .form-input {
+    height: 4rem;
+    width: 100%;
+    border: none;
+    border-radius: .4rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    font-family: inherit;
+    color: var(--greyDark);
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .form .form-input::-moz-placeholder,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .subject .form-input::-moz-placeholder,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me textarea::-moz-placeholder {
+    color: var(--greyLight-3);
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .form .form-input:-ms-input-placeholder,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .subject .form-input::-ms-input-placeholder,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me textarea::-ms-input-placeholder {
+    color: var(--greyLight-3);
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .form .form-input::placeholder,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .subject .form-input::placeholder,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me textarea::placeholder {
+    color: var(--greyLight-3);
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .form .form-input:focus,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .subject .form-input:focus,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me textarea:focus {
+    outline: none;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me button {
+    padding: .5rem 1.3rem;
+    border: none;
+    border-radius: 1rem;
+    font-family: inherit;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    grid-column: 1/2;
+    grid-row: 5/6;
+    color: var(--greyDark);
+}
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me button:hover,
+.hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me button:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary);
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-header span {
+    color: var(--greyLight-3);
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    margin-top: 2rem;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-card {
+    width: 70%;
+    height: auto;
+    border-radius: .4rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--greyLight-2), -0.1rem -0.1rem 0.3rem var(--white);
+    background: none;
+    font-family: inherit;
+    color: var(--greyDark);
+    display: flex;
+    flex-flow: row nowrap;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-card .quote-icon {
+    width: 15%;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-card .quote-icon i {
+    margin: 1.4rem 1rem;
+    font-size: 1.3rem;
+    color: var(--primary);
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-card .quote-text {
+    width: 85%;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-card .quote-text p {
+    color: var(--primary);
+    margin: 1rem 1.5rem 1rem 0;
+    font-size: 1.1rem;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project {
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    height: auto;
+    margin-top: 1rem;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-image-wrapper {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20%;
+    width: 80px;
+    height: 75px;
+    border-radius: .4rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--greyLight-2), -0.1rem -0.1rem 0.3rem var(--white);
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-image-wrapper .project-image {
+    width: 60px;
+    height: 60px;
+    border-radius: .2rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--greyLight-2), -0.1rem -0.1rem 0.3rem var(--white);
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    min-width: 35%;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-info * {
+    margin: 0 0 0 1rem;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-info span {
+    font-size: .8rem;
+    white-space: nowrap;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-changer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-changer .left-slide,
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-changer .right-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--greyLight-2), -0.1rem -0.1rem 0.3rem var(--white);
+    border-radius: .4rem;
+    margin: 0 .5rem;
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-changer .left-slide i,
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-changer .right-slide i {
+    color: var(--greyLight-2);
+}
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-changer .left-slide:hover i,
+.hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .center .quote-project .project-changer .right-slide:hover i {
+    color: var(--primary);
+}
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper span {
+    text-align: center;
+    max-width: 400px;
+    color: var(--greyLight-3);
+}
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper h1 {
+    font-family: Arial, sans-serif;
+}
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 3rem;
+    padding: 0;
+}
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper ul li {
+    border-radius: 50%;
+    padding: .8rem 1rem .6rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    transition: all 0.5s ease;
+}
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper ul li:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper ul li a {
+    text-decoration: none;
+}
+/* Adjust image size for footer buttons */
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper ul li a img {
+    width: 24px; /* Set the desired width */
+    height: 24px; /* Set the desired height */
+    object-fit: contain; /* Ensure proper scaling within the dimensions */
+}
+
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper ul li a i {
+    font-size: 1.2rem;
+    color: var(--greyDark);
+}
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper ul li:hover a i,
+.hero-banner.pre-footer-hero-banner .hero-banner-wrapper ul li:active a i {
+    color: var(--primary);
+}
+
+footer .hero-banner-wrapper span {
+    font-size: .8rem;
+}
+footer .hero-banner-wrapper span a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: var(--primary);
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: var(--primary) }
+    50% { border-color: transparent }
+}
+@media screen and (max-width: 1200px) {
+    nav .generic-container .nav {
+        display: none;
+    }
+    nav .generic-container .mobile-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        background-color: var(--greyLight-1);
+        width: 40px;
+        height: 40px;
+        border-radius: .4rem;
+        margin-top: var(--top-padding);
+        box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+        transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+    }
+    nav .generic-container .mobile-button span {
+        background-color: var(--primary);
+        box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+        width: 30px;
+        height: 3px;
+        border-radius: .4rem;
+        margin: 3px 0 3px 0;
+        transition: margin 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81), transform 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+    }
+    nav .generic-container .mobile-button span:nth-child(2) {
+        transform-origin: 50% 50%;
+    }
+
+    nav .generic-container.active .mobile-button {
+        box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    }
+    nav .generic-container.active .mobile-button span {
+        margin: -1px;
+    }
+    nav .generic-container.active .mobile-button span:nth-child(1) {
+        transform: rotate(-45deg);
+    }
+    nav .generic-container.active .mobile-button span:nth-child(2) {
+        transform: scale(0);
+    }
+    nav .generic-container.active .mobile-button span:nth-child(3) {
+        transform: rotate(45deg);
+    }
+    .hero-banner .hero-banner-wrapper .hero-banner-body .right .contact-info .info {
+        width: 100%;
+    }
+    .hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me .form {
+        width: 100%;
+    }
+    .hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos {
+        flex-flow: row wrap;
+    }
+    .hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .infos .card {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .right,
+    .hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .right .quote-card,
+    .hero-banner.project-hero-banner .hero-banner-wrapper .hero-banner-body .right .quote-project {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .hero-banner.skill-hero-banner .hero-banner-wrapper .hero-banner-body .left {
+        align-items: center;
+    }
+    .hero-banner.contact-hero-banner .hero-banner-wrapper .hero-banner-body .contact-me {
+        justify-content: center;
+    }
+}
+
+

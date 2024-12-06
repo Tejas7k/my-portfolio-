@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programmer</title>
+    <link rel="stylesheet" href="style_updated.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+<nav>
+    
+    <div class="generic-container">
+        <div class="logo"><img src="Logo..jpg" alt="logo"></div>
+        <div class="mobile-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="#home" id="menu-home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Section 1 -->
+<div class="hero-banner" id="home">
+    <div class="generic-container">
+        <div class="text">
+            <ul>
+                <li><a href="resume.pdf">
+                    <img src="resume-and-cv.png" alt="resume">
+                    <i class="fa fa-xmark"></i></a></li>
+
+                <li><a href="https://github.com/tejas7k">
+                    <img src="github.png" alt="github">
+                    <i class="fa fa-xmark"></i></a></li>
+
+                <li><a href="">
+                    <img src="instagram.png" alt="insta">
+                    <i class="fab fa-instagram"></i></a></li>
+
+                <li><a href="https://www.linkedin.com/in/tejas-khutwad7/">
+                    <img src="linkedin.png" alt="linkedin">
+                    <i class="fab fa-linkedin"></i></a></li>
+
+                <li><a href="https://x.com/Tejaskhutwad7?t=jhMLD1gVTaCMh_P3Rj1tmQ&s=09">
+                    <img src="twitter.png" alt="X">
+                    <i class="fab fa-x"></i></a></li>
+                
+            </ul>
+            <h1>Tejas Khutwad</h1>
+            <p>I'm Tejas,n entry level developer with a strong foundation in software engineering. My dedication to excellence, problem-solving mindset, and commitment to continuous learning make me a valuable asset in any technology focused team.</p>
+             <button onclick="location.href='#about'"> More About Me</button>
+        </div>
+      <a href="#about">
+        <div class="image">
+          <div class="profile-picture">
+            
+        </div>
+        </div></a>
+    </div>
+</div>
+
+<div class="hero-banner about-hero-banner" id="about">
+    <div class="hero-banner-wrapper">
+        <div class="hero-banner-header">
+            <h1>About Me</h1>
+            <p> My name is Tejas Khutwad, and I am in my final year of a Bachelor of Computer Science. I am proficient in Java, SQL, C, HTML, CSS, and JavaScript, with a strong interest in software development. I have worked on academic projects that helped me gain hands-on experience in coding and problem-solving. I am passionate about learning new technologies and building efficient solutions. My goal is to leverage my skills and grow as a full-stack developer in a challenging environment.</p>
+            <div class="divider"></div>
+        </div>
+        <div class="hero-banner-body">
+            <div class="left">
+                <div class="profile-picture-wrapper">
+                  <a href="#"><div class="profile-picture" id="my-image"></div></a>
+                </div>
+            </div>
+            <div class="right">
+                <h1>Education</h1> <p><b>SPPU:</b> BSc (Computer Science)</p> <p><b>CGPA:</b> 8.7</p>
+                <p><b>M.E.S Boys High School:</b> 12th Science</p> <p><b>Grade:</b> A</p>
+                <div class="contact-info">
+                    <div class="info">
+                        <h1>Name:</h1>
+                        <p class="my-name"></p>
+                    </div>
+                    <div class="info">
+                        <h1>Email:</h1>
+                        <p class="my-email"></p>
+                    </div>
+                    <div class="info">
+                        <h1>LinkedIn:</h1>
+                        <p class="my-name">Tejas Khutwad</p>
+                    </div>
+                    <div class="info">
+                        <h1>Instagram:</h1>
+                        <p class="my-insta"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hero-banner skill-hero-banner" id="skill">
+    <div class="hero-banner-wrapper">
+        <div class="hero-banner-header">
+            <h1>Skills</h1>
+            <div class="divider"></div>
+        </div>
+        <div class="hero-banner-body">
+            <div class="left">
+                <span>I'm proficient in:</span>
+
+
+                
+                <img src="FrameWorks_-_20241120_174617_0000.png" alt="skill img">
+                
+                    <button onclick="location.href='#contact'"> Contact Me</button>
+            </div>
+            
+            <div class="right">
+                <div class="slider">
+                    <span class="java">Java</span>
+                    <div class="slider-box" id="java">
+                        <span class="slider-btn" id="java-btn"></span>
+                        <span class="slider-color" id="java-progress"></span>
+                        <span class="slider-tooltip" id="java-value"></span>
+                    </div>
+                </div>
+                <div class="slider">
+                    <span>JavaScript</span>
+                    <div class="slider-box" id="js">
+                        <span class="slider-btn" id="js-btn"></span>
+                        <span class="slider-color" id="js-progress"></span>
+                        <span class="slider-tooltip" id="js-value"></span>
+                    </div>
+                </div>
+                <div class="slider">
+                    <span>HTML</span>
+                    <div class="slider-box" id="html">
+                        <span class="slider-btn" id="html-btn"></span>
+                        <span class="slider-color" id="html-progress"></span>
+                        <span class="slider-tooltip" id="html-value"></span>
+                    </div>
+                </div>
+                <div class="slider">
+                    <span>CSS</span>
+                    <div class="slider-box" id="css">
+                        <span class="slider-btn" id="css-btn"></span>
+                        <span class="slider-color" id="css-progress"></span>
+                        <span class="slider-tooltip" id="css-value"></span>
+                    </div>
+                </div>
+                <div class="slider">
+                    <span>SQL</span>
+                    <div class="slider-box" id="sql">
+                        <span class="slider-btn" id="sql-btn"></span>
+                        <span class="slider-color" id="sql-progress"></span>
+                        <span class="slider-tooltip" id="sql-value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hero-banner project-hero-banner" id="project">
+    <div class="hero-banner-wrapper">
+        <div class="hero-banner-header">
+            <h1>projects</h1>
+            <span>"Learning, innovating, and creating for a better tomorrow."
+            </span>
+            <div class="divider"></div>
+        </div>
+        <div class="hero-banner-body">
+            <div class="center">
+                <div class="quote-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="quote-text">
+                        <p id="project-quote"></p>
+                    </div>
+                </div>
+                <div class="quote-project">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" id="project-image"></div>
+                    </div>
+                    <div class="project-info">
+                        <h4 id="project-name">Face Recognition Attendance System</h4>
+                        <span id="project-work"></span>
+                    </div>
+                    <div class="project-changer">
+                        <div class="left-slide" onclick="changeproject('-')">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="right-slide" onclick="change('+')">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hero-banner contact-hero-banner" id="contact">
+    <div class="hero-banner-wrapper">
+        <div class="hero-banner-header">
+            <span>Have Any Query?</span>
+            <h1>Contact Me</h1>
+            <div class="divider"></div>
+        </div>
+        <div class="hero-banner-body">
+            <div class="infos">
+                <div class="card">
+                    <div class="icon">
+                        <img src="location.png" alt="location">
+                        <i class="fas fa-location-arrow"></i>
+                    </div>
+                    <div class="info">
+                        <span>Location</span>
+                        <p class="my-location"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="email.png" alt="mail">
+                        <i class="fas fa-mail"></i>
+                    </div>
+                    <div class="info">
+                        <span>Get in online</span>
+                        <p class="my-email"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="linkedin.png" alt="linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="info">
+                        <span>LinkedIn</span>
+                        <p class="my-name"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-me">
+                <div class="form">
+                    <input type="text" class="form-input" placeholder="Your name">
+                </div>
+                <div class="form">
+                    <input type="text" class="form-input" placeholder="Your E-Mail">
+                </div>
+                <div class="subject">
+                    <input type="text" class="form-input" placeholder="Your Subject">
+                </div>
+                <textarea name="textarea" cols="40" rows="10" aria-required="true" aria-invalid="false" placeholder="Your Message"></textarea>
+                <button>Send Message</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hero-banner project-hero-banner">
+    <div class="hero-banner-wrapper">
+
+    </div>
+</div>
+
+<div class="hero-banner pre-footer-hero-banner" id="pre-footer">
+    <div class="hero-banner-wrapper">
+        <h1>Tejas Khutwad</h1>
+        <span>"Every bug fixed is a step closer to greatness."<br>
+            "This website reflects my journey as a developer—always evolving, always learning."
+        </span>
+        <div class="divider"></div>
+        <ul>
+            <ul>
+                <li><a href="https://github.com/tejas7k">
+                    <img src="github.png" alt="insta">
+                    <i class="fa fa-xmark"></i></a></li>
+
+                <li><a href="">
+                    <img src="instagram.png" alt="insta">
+                    <i class="fab fa-instagram"></i></a></li>
+
+                <li><a href="https://www.linkedin.com/in/tejas-khutwad7/">
+                    <img src="linkedin.png" alt="linkedin">
+                    <i class="fab fa-linkedin"></i></a></li>
+
+                <li><a href="https://x.com/Tejaskhutwad7?t=jhMLD1gVTaCMh_P3Rj1tmQ&s=09">
+                    <img src="twitter.png" alt="X">
+                    <i class="fab fa-x"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<button onclick="topFunction()" id="my-btn" class="scroll-button"><i class="fas fa-arrow-up"></i></button>
+
+<footer class="hero-banner footer-hero-banner" id="footer">
+    <div class="hero-banner-wrapper">
+        <span>Copyright © 2024<a href="#">Tejas Khutwad</a> All Rights Reserved. </span>
+    </div>
+</footer>
+
+<script src="test_updated.js"></script>
+    
+</body>
+</html>
